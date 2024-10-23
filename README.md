@@ -3,7 +3,11 @@
 ## PRTG Sensor
 
 Author:     lloydy@purestorage.com
-Version:    1.10
+Note:       The original author, listed above, is no longer employed by Pure and that e-mail address is invalid. 
+Note:       I'm not sure what version of 6.5.x this script stopped working. I was on 6.3.15 when this was working, but upgrading to 6.5.8 caused it to stop functioning. 
+Note:       The fix involves using a new SSL certificate (self-signed or from your local CA), and installing the certificate on your PRTG server/probe. 
+Note:       Line 835 of the script has been commented out in this fork. 
+Version:    1.11
 
 
 This sensor allows selective monitoring of **FlashArray** components as required. 
@@ -53,7 +57,8 @@ Each of the scope options has its own sensor and then multiple channels. This is
    sensors. THis then copies itself to a new sensor assigned to the holding device and updates the paramdeters accordingly. It also removes sensors of any 
    volume that has been deleted 
     - Create 'VolumeManage' sensor with the additional parameters -prtghosturl -prtguser -prtgpassword -DeviceID -SensorID
-
+6) Using the GUI (Settings - SSL Certificate), or CLI, Construct a new Certificate Signing Request. Make sure you use the exact FQDN from the certificate CN to access the pure storage array
+7) Import a valid SSL certificate to the pure array or create a self signed certificate and import it to trusted root CAs on the PRTG server/probe. 
 
 
 ---
