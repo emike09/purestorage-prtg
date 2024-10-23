@@ -832,7 +832,7 @@ function Delete-Session{
 $timer = [system.diagnostics.stopwatch]::StartNew()
 
 # Set Certificate validation
-[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
+#[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 
 
