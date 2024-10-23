@@ -3,6 +3,7 @@
 ## PRTG Sensor
 
 Author:     lloydy@purestorage.com
+
 Note:       The original author, listed above, is no longer employed by Pure and that e-mail address is invalid. 
 Note:       I'm not sure what version of 6.5.x this script stopped working. I was on 6.3.15 when this was working, but upgrading to 6.5.8 caused it to stop functioning. 
 Note:       The fix involves using a new SSL certificate (self-signed or from your local CA), and installing the certificate on your PRTG server/probe. 
